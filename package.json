@@ -55,7 +55,7 @@
     "prettier": "^2.8.2",
     "prettier-eslint": "^15.0.1",
     "prettier-eslint-cli": "^7.1.0",
-    "prettier-plugin-organize-attributes": "^0.0.5",
+    "prettier-plugin-organize-attributes": "^1.0.0",
     "ts-loader": "^9.4.2",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.1.2",
