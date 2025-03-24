@@ -21,7 +21,7 @@ devDependencies:
     version: 9.0.13
   '@types/node':
     specifier: ^18.11.18
-    version: 18.19.80
+    version: 18.19.81
   '@typescript-eslint/eslint-plugin':
     specifier: ^5.48.1
     version: 5.48.1(@typescript-eslint/parser@5.48.1)(eslint@8.57.1)(typescript@4.9.5)
@@ -81,7 +81,7 @@ devDependencies:
     version: 9.4.2(typescript@4.9.5)(webpack@5.75.0)
   ts-node:
     specifier: ^10.9.1
-    version: 10.9.2(@types/node@18.19.80)(typescript@4.9.5)
+    version: 10.9.2(@types/node@18.19.81)(typescript@4.9.5)
   tsconfig-paths:
     specifier: ^4.1.2
     version: 4.1.2
@@ -373,7 +373,7 @@ packages:
   /@types/adm-zip@0.5.0:
     resolution: {integrity: sha512-FCJBJq9ODsQZUNURo5ILAQueuA8WJhRvuihS3ke2iI25mJlfV2LK8jG2Qj2z2AWg8U0FtWWqBHVRetceLskSaw==}
     dependencies:
-      '@types/node': 18.19.80
+      '@types/node': 18.19.81
     dev: true
 
   /@types/eslint-scope@3.7.4:
@@ -401,7 +401,7 @@ packages:
   /@types/fs-extra@9.0.13:
     resolution: {integrity: sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA==}
     dependencies:
-      '@types/node': 18.19.80
+      '@types/node': 18.19.81
     dev: true
 
   /@types/json-schema@7.0.12:
@@ -416,8 +416,8 @@ packages:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: false
 
-  /@types/node@18.19.80:
-    resolution: {integrity: sha512-kEWeMwMeIvxYkeg1gTc01awpwLbfMRZXdIhwRcakd/KlK53jmRC26LqcbIt7fnAQTu5GzlnWmzA3H6+l1u6xxQ==}
+  /@types/node@18.19.81:
+    resolution: {integrity: sha512-7KO9oZ2//ivtSsryp0LQUqq79zyGXzwq1WqfywpC9ucjY7YyltMMmxWgtRFRKCxwa7VPxVBVy4kHf5UC1E8Lug==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -2736,7 +2736,7 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 18.19.80
+      '@types/node': 18.19.81
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: true
@@ -4165,7 +4165,7 @@ packages:
       webpack: 5.75.0(webpack-cli@5.0.1)
     dev: true
 
-  /ts-node@10.9.2(@types/node@18.19.80)(typescript@4.9.5):
+  /ts-node@10.9.2(@types/node@18.19.81)(typescript@4.9.5):
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
@@ -4184,7 +4184,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 18.19.80
+      '@types/node': 18.19.81
       acorn: 8.14.0
       acorn-walk: 8.3.4
       arg: 4.1.3
