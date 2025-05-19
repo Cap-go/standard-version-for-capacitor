@@ -1,6 +1,6 @@
 {
   "name": "capacitor-standard-version",
-  "version": "1.1.27",
+  "version": "1.1.28",
   "description": "Default standard-version config for capacitor app",
   "main": "dist/index.js",
   "bin": {
