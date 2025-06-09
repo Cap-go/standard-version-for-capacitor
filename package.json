@@ -45,7 +45,7 @@
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.27.4",
     "eslint-plugin-jasmine": "^4.1.3",
-    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-simple-import-sort": "^8.0.0",
     "eslint-plugin-typescript-sort-keys": "^2.1.0",
     "git-format-staged": "^3.0.0",
