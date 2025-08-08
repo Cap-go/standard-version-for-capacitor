@@ -3,27 +3,25 @@ name: Build source code and send to Capgo
 on:
   push:
     tags:
-      - "*"
+      - '*'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    name: "Build code and release"
+    name: Build code and release
     steps:
       - name: Check out
-        uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2.4.1
-        with:
-          version: 7
+        uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
       - name: Install dependencies
         id: install_code
-        run: pnpm i
+        run: bun i
       - name: Lint
         id: lint_code
-        run: pnpm lint
+        run: bun run lint
       - name: Build
         id: build_code
-        run: pnpm build
-      - uses: JS-DevTools/npm-publish@v1
+        run: bun run build
+      - uses: JS-DevTools/npm-publish@v3
         with:
           token: ${{ secrets.NPM_TOKEN }}

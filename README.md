@@ -11,9 +11,7 @@ use it at builtin replacement of https://www.npmjs.com/package/standard-version
 
 All config from .versionrc, .versionrc.json or .versionrc.js are supported
 
-
-## Install 
-
+## Install
 
 `npm i capacitor-standard-version`
 
@@ -34,7 +32,7 @@ jobs:
   bump-version:
     if: "!startsWith(github.event.head_commit.message, 'chore(release):')"
     runs-on: ubuntu-latest
-    name: "Bump version and create changelog with standard version"
+    name: Bump version and create changelog with standard version
     steps:
       - name: Check out
         uses: actions/checkout@v3

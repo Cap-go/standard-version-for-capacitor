@@ -1,9 +1,9 @@
-import * as android from './android';
-import * as ios from './ios';
+import standardVersion from '@capgo/standard-version'
+import command from '@capgo/standard-version/command'
 
-import standardVersion from '@capgo/standard-version';
-import command from '@capgo/standard-version/command';
-import merge from 'merge-deep';
+import merge from 'merge-deep'
+import * as android from './android'
+import * as ios from './ios'
 
 const baseConfig = {
   noVerify: true,
@@ -32,17 +32,18 @@ const baseConfig = {
       updater: ios,
     },
   ],
-};
+}
 
 async function run() {
   try {
     // merge base config with user config
-    const finalConfig = merge(command.argv, baseConfig);
-    await standardVersion(finalConfig);
-  } catch (error) {
-    console.error(error);
-    throw error;
+    const finalConfig = merge(command.argv, baseConfig)
+    await standardVersion(finalConfig)
+  }
+  catch (error) {
+    console.error(error)
+    throw error
   }
 }
 
-run();
+run()
