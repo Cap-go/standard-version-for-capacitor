@@ -1,5 +1,5 @@
-import standardVersion from '@capgo/standard-version'
-import command from '@capgo/standard-version/command'
+import standardVersion from 'commit-and-tag-version'
+import command from 'commit-and-tag-version/command'
 
 import merge from 'merge-deep'
 import * as android from './android'
