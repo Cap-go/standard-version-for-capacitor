@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.44](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.43...v1.1.44) (2025-09-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency commit-and-tag-version to v12.6.0 ([#72](https://github.com/Cap-go/capacitor-standard-version/issues/72)) ([c6dd9e2](https://github.com/Cap-go/capacitor-standard-version/commit/c6dd9e293bccf46be012526ed1675c77b51fa2c2))
+
 ### [1.1.43](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.42...v1.1.43) (2025-09-15)
 
 ### [1.1.42](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.41...v1.1.42) (2025-09-08)
