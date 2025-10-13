@@ -21,7 +21,7 @@ devDependencies:
     version: 0.5.7
   '@types/node':
     specifier: ^18.19.118
-    version: 18.19.129
+    version: 18.19.130
   git-format-staged:
     specifier: ^3.1.1
     version: 3.1.1
@@ -33,7 +33,7 @@ devDependencies:
     version: 9.5.4(typescript@5.9.3)(webpack@5.101.3)
   ts-node:
     specifier: ^10.9.2
-    version: 10.9.2(@types/node@18.19.129)(typescript@5.9.3)
+    version: 10.9.2(@types/node@18.19.130)(typescript@5.9.3)
   tsconfig-paths:
     specifier: ^4.2.0
     version: 4.2.0
@@ -554,7 +554,7 @@ packages:
   /@types/adm-zip@0.5.7:
     resolution: {integrity: sha512-DNEs/QvmyRLurdQPChqq0Md4zGvPwHerAJYWk9l2jCbD1VPpnzRJorOdiq4zsw09NFbYnhfsoEhWtxIzXpn2yw==}
     dependencies:
-      '@types/node': 18.19.129
+      '@types/node': 18.19.130
     dev: true
 
   /@types/debug@4.1.12:
@@ -599,8 +599,8 @@ packages:
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
     dev: true
 
-  /@types/node@18.19.129:
-    resolution: {integrity: sha512-hrmi5jWt2w60ayox3iIXwpMEnfUvOLJCRtrOPbHtH15nTjvO7uhnelvrdAs0dO0/zl5DZ3ZbahiaXEVb54ca/A==}
+  /@types/node@18.19.130:
+    resolution: {integrity: sha512-GRaXQx6jGfL8sKfaIDD6OupbIHBr9jv7Jnaml9tB7l4v068PAOXqfcujMMo5PhbIs6ggR1XODELqahT2R8v0fg==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -2778,7 +2778,7 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 18.19.129
+      '@types/node': 18.19.130
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: true
@@ -4405,7 +4405,7 @@ packages:
       webpack: 5.101.3(webpack-cli@6.0.1)
     dev: true
 
-  /ts-node@10.9.2(@types/node@18.19.129)(typescript@5.9.3):
+  /ts-node@10.9.2(@types/node@18.19.130)(typescript@5.9.3):
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
@@ -4424,7 +4424,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 18.19.129
+      '@types/node': 18.19.130
       acorn: 8.14.1
       acorn-walk: 8.3.4
       arg: 4.1.3
