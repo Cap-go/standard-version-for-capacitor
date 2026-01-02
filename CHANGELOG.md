@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.65...v1.2.0) (2026-01-02)
+
+
+### Features
+
+* add GitHub Actions workflow for releasing to Discord ([648c19d](https://github.com/Cap-go/capacitor-standard-version/commit/648c19dac9958fcd8340c824562dd992568b4978))
+
 ### [1.1.65](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.64...v1.1.65) (2026-01-02)
 
 ### [1.1.64](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.63...v1.1.64) (2026-01-02)
