@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/Cap-go/capacitor-standard-version/compare/v1.2.0...v1.3.0) (2026-01-02)
+
+
+### Features
+
+* add AI changelog generation to build workflow ([bfa7ed3](https://github.com/Cap-go/capacitor-standard-version/commit/bfa7ed35da02e83aef9c47795a96bfe62a5f3d9b))
+
 ## [1.2.0](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.65...v1.2.0) (2026-01-02)
 
 
