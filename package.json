@@ -4,13 +4,13 @@
   "description": "Default standard-version config for capacitor app",
   "author": "Martin Donadieu <martindonadieu@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/Cap-go/capacitor-standard-version#readme",
+  "homepage": "https://github.com/Cap-go/standard-version-for-capacitor#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cap-go/capacitor-standard-version.git"
+    "url": "git+https://github.com/Cap-go/standard-version-for-capacitor.git"
   },
   "bugs": {
-    "url": "https://github.com/Cap-go/capacitor-standard-version/issues"
+    "url": "https://github.com/Cap-go/standard-version-for-capacitor/issues"
   },
   "keywords": [
     "capacitor",
