@@ -2,6 +2,67 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.63](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.62...v1.1.63) (2026-01-02)
+
+### [1.1.62](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.61...v1.1.62) (2025-12-30)
+
+### [1.1.61](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.60...v1.1.61) (2025-12-24)
+
+### [1.1.60](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.59...v1.1.60) (2025-12-22)
+
+### [1.1.59](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.58...v1.1.59) (2025-12-09)
+
+### [1.1.58](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.57...v1.1.58) (2025-12-08)
+
+### [1.1.57](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.56...v1.1.57) (2025-12-02)
+
+### [1.1.56](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.55...v1.1.56) (2025-11-24)
+
+### [1.1.55](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.54...v1.1.55) (2025-11-19)
+
+### [1.1.54](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.53...v1.1.54) (2025-11-11)
+
+### [1.1.53](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.52...v1.1.53) (2025-11-04)
+
+### [1.1.52](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.51...v1.1.52) (2025-10-29)
+
+### [1.1.51](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.50...v1.1.51) (2025-10-22)
+
+### [1.1.50](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.49...v1.1.50) (2025-10-13)
+
+### [1.1.49](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.48...v1.1.49) (2025-10-13)
+
+### [1.1.48](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.47...v1.1.48) (2025-10-06)
+
+### [1.1.47](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.46...v1.1.47) (2025-10-06)
+
+### [1.1.46](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.45...v1.1.46) (2025-09-22)
+
+### [1.1.45](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.44...v1.1.45) (2025-09-22)
+
+### [1.1.44](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.43...v1.1.44) (2025-09-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency commit-and-tag-version to v12.6.0 ([#72](https://github.com/Cap-go/capacitor-standard-version/issues/72)) ([c6dd9e2](https://github.com/Cap-go/capacitor-standard-version/commit/c6dd9e293bccf46be012526ed1675c77b51fa2c2))
+
+### [1.1.43](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.42...v1.1.43) (2025-09-15)
+
+### [1.1.42](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.41...v1.1.42) (2025-09-08)
+
+### [1.1.41](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.40...v1.1.41) (2025-09-08)
+
+### [1.1.40](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.39...v1.1.40) (2025-08-25)
+
+### [1.1.39](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.38...v1.1.39) (2025-08-25)
+
+### [1.1.38](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.37...v1.1.38) (2025-08-18)
+
+### [1.1.37](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.36...v1.1.37) (2025-08-18)
+
+### [1.1.36](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.35...v1.1.36) (2025-08-11)
+
 ### [1.1.35](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.34...v1.1.35) (2025-08-08)
 
 ### [1.1.34](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.33...v1.1.34) (2025-08-08)
