@@ -25,7 +25,8 @@
   "scripts": {
     "dev": "bun build src/bin/index.ts --outdir dist --target node --packages external",
     "build": "bun build src/bin/index.ts --outdir dist --target node --minify --packages external",
-    "lint": "eslint --fix",
+    "lint:fix": "eslint --fix",
+    "lint": "eslint",
     "test": "bun test"
   },
   "dependencies": {
