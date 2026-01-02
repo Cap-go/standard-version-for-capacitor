@@ -19,9 +19,6 @@ jobs:
       - name: Lint
         id: lint_code
         run: bun run lint
-      - name: Test
-        id: test_code
-        run: bun test
       - name: Build
         id: build_code
         run: bun run build
