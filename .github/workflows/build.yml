@@ -58,4 +58,3 @@ jobs:
           make_latest: true
           token: '${{ secrets.PERSONAL_ACCESS_TOKEN }}'
           prerelease: ${{ contains(github.ref, '-alpha.') }}
-

@@ -115,6 +115,7 @@ buildSettings = {
       expect(result.match(/CURRENT_PROJECT_VERSION = 10001999;/g)?.length).toBe(2)
     })
 
+    /* eslint-disable style/no-tabs */
     it('should handle real-world pbxproj content', () => {
       const contents = `// !$*UTF8*$!
 {
@@ -153,5 +154,6 @@ buildSettings = {
       expect(result).toContain('PRODUCT_BUNDLE_IDENTIFIER = com.example.app;')
       expect(result).toContain('SWIFT_VERSION = 5.0;')
     })
+    /* eslint-enable style/no-tabs */
   })
 })
