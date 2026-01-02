@@ -36,7 +36,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^5.2.0",
     "@types/adm-zip": "^0.5.7",
-    "@types/node": "^18.19.118",
+    "@types/node": "^24.0.0",
     "git-format-staged": "^3.1.1",
     "husky": "^9.1.7",
     "ts-loader": "^9.5.2",
