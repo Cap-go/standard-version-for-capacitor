@@ -23,8 +23,8 @@
     "capacitor-standard-version": "dist/index.js"
   },
   "scripts": {
-    "dev": "bun build src/bin/index.ts --outdir dist --target node --packages external",
-    "build": "bun build src/bin/index.ts --outdir dist --target node --minify --packages external",
+    "dev": "bun build src/bin/index.ts --outdir dist --target node --format cjs --packages external",
+    "build": "bun build src/bin/index.ts --outdir dist --target node --format cjs --minify --packages external",
     "lint:fix": "eslint --fix",
     "lint": "eslint",
     "test": "bun test"
