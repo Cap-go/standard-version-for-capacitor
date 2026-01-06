@@ -1,4 +1,4 @@
-import { execSync } from 'node:child_process'
+import { execFileSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { describe, expect, it } from 'bun:test'
@@ -13,7 +13,8 @@ describe('binary executable', () => {
   })
 
   it('should be executable with node', () => {
-    const output = execSync(`node ${distPath} --version`, { encoding: 'utf-8' })
+    // Use execFileSync for safer execution without shell injection
+    const output = execFileSync('node', [distPath, '--version'], { encoding: 'utf-8' })
     // Should output the version number without errors
     expect(output.trim()).toMatch(/^\d+\.\d+\.\d+/)
   })
@@ -22,14 +23,15 @@ describe('binary executable', () => {
     const content = readFileSync(distPath, 'utf-8')
     // Check that the file uses require() and not import
     expect(content).toContain('require(')
-    // Make sure it doesn't use ESM import (after the shebang line)
-    const withoutShebang = content.split('\n').slice(1).join('\n')
-    expect(withoutShebang).not.toMatch(/^import .* from/)
+    // Make sure it doesn't use ESM import anywhere in the file
+    // Using a simpler regex to avoid backtracking issues
+    expect(content).not.toMatch(/\bimport\s.*\sfrom\s/)
   })
 
   it('should execute directly as a script', () => {
     // Execute the binary directly (requires shebang and executable permissions)
-    const output = execSync(`${distPath} --version`, { encoding: 'utf-8' })
+    // Use execFileSync to avoid shell injection
+    const output = execFileSync(distPath, ['--version'], { encoding: 'utf-8' })
     expect(output.trim()).toMatch(/^\d+\.\d+\.\d+/)
   })
 })
