@@ -1,7 +1,7 @@
-import { describe, expect, it } from 'bun:test'
 import { execSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
+import { describe, expect, it } from 'bun:test'
 
 describe('binary executable', () => {
   const distPath = resolve(__dirname, '../../dist/index.js')
@@ -29,7 +29,7 @@ describe('binary executable', () => {
 
   it('should execute directly as a script', () => {
     // Execute the binary directly (requires shebang and executable permissions)
-    const output = execSync(distPath + ' --version', { encoding: 'utf-8' })
+    const output = execSync(`${distPath} --version`, { encoding: 'utf-8' })
     expect(output.trim()).toMatch(/^\d+\.\d+\.\d+/)
   })
 })
