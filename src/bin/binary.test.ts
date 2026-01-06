@@ -4,7 +4,9 @@ import { resolve } from 'node:path'
 import { describe, expect, it } from 'bun:test'
 
 describe('binary executable', () => {
-  const distPath = resolve(__dirname, '../../dist/index.js')
+  // Read the binary path from package.json for better maintainability
+  const packageJson = JSON.parse(readFileSync(resolve(__dirname, '../../package.json'), 'utf-8'))
+  const distPath = resolve(__dirname, '../../', packageJson.bin['capacitor-standard-version'])
 
   it('should have shebang as first line', () => {
     const content = readFileSync(distPath, 'utf-8')
@@ -24,8 +26,8 @@ describe('binary executable', () => {
     // Check that the file uses require() and not import
     expect(content).toContain('require(')
     // Make sure it doesn't use ESM import anywhere in the file
-    // Using a simpler regex to avoid backtracking issues
-    expect(content).not.toMatch(/\bimport\s.*\sfrom\s/)
+    // Match all forms: import foo from, import * as, import {}, etc.
+    expect(content).not.toMatch(/\bimport\b.+\bfrom\b/)
   })
 
   it('should execute directly as a script', () => {
