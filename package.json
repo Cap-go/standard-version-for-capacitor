@@ -1,6 +1,6 @@
 {
   "name": "capacitor-standard-version",
-  "version": "1.3.17",
+  "version": "1.3.18",
   "description": "Default standard-version config for capacitor app",
   "author": "Martin Donadieu <martindonadieu@gmail.com>",
   "license": "MIT",
