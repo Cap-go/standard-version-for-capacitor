@@ -1,25 +1,31 @@
-# capacitor-standard-version
+# @capgo/capacitor-standard-version
   <a href="https://capgo.app/"><img src='https://raw.githubusercontent.com/Cap-go/capgo/main/assets/capgo_banner.png' alt='Capgo - Instant updates for capacitor'/></a>
 <div align="center">
   <h2><a href="https://capgo.app/?ref=plugin"> ➡️ Get Instant updates for your App with Capgo</a></h2>
   <h2><a href="https://capgo.app/consulting/?ref=plugin"> Missing a feature? We’ll build the plugin for you 💪</a></h2>
 </div>
 
-Default config for standard-version for capacitor app
+Default config for `standard-version` in Capacitor apps.
 
-use it at builtin replacement of https://www.npmjs.com/package/standard-version
+Use it as a built-in replacement for https://www.npmjs.com/package/standard-version.
 
-All config from .versionrc, .versionrc.json or .versionrc.js are supported
+All config from `.versionrc`, `.versionrc.json`, or `.versionrc.js` is supported.
 
 ## Install
 
-`npm i capacitor-standard-version`
+`npm i -D @capgo/capacitor-standard-version`
+
+The legacy unscoped package name `capacitor-standard-version` now lives under the `@capgo` npm org. The CLI binary name stays `capacitor-standard-version`.
 
 ## Usage
 
-Run `npx capacitor-standard-version` for update main version or `npx capacitor-standard-version --prerelease alpha` for alpha release for dev branch.
+Run `npx capacitor-standard-version` after installing it locally, or `npx @capgo/capacitor-standard-version` to execute it directly from npm.
 
-Exemple of Github action to do it on every commit in `main` and `development`
+For a stable release use `npx capacitor-standard-version`.
+
+For an alpha prerelease use `npx capacitor-standard-version --prerelease alpha`.
+
+Example GitHub Action to run it on every commit to `main` and `development`.
 
 ```yml
 on:
@@ -45,10 +51,10 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
       - name: Create bump and changelog
         if: github.ref == 'refs/heads/main'
-        run: npx capacitor-standard-version
+        run: npx @capgo/capacitor-standard-version
       - name: Create bump and changelog
         if: github.ref != 'refs/heads/main'
-        run: npx capacitor-standard-version --prerelease alpha
+        run: npx @capgo/capacitor-standard-version --prerelease alpha
       - name: Push to origin
         run: |
           CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
@@ -56,4 +62,4 @@ jobs:
           git pull $remote_repo $CURRENT_BRANCH
           git push $remote_repo HEAD:$CURRENT_BRANCH --follow-tags --tags
 ```
-For this action to work you have to add as env var `PERSONAL_ACCESS_TOKEN` you can create it by following this doc https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+For this action to work you have to add `PERSONAL_ACCESS_TOKEN` as an environment variable. You can create it by following this guide: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
