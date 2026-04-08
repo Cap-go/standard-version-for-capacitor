@@ -62,4 +62,4 @@ jobs:
           git pull $remote_repo $CURRENT_BRANCH
           git push $remote_repo HEAD:$CURRENT_BRANCH --follow-tags --tags
 ```
-For this action to work you have to add `PERSONAL_ACCESS_TOKEN` as an environment variable. You can create it by following this guide: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+For this action to work, store `PERSONAL_ACCESS_TOKEN` in your repository or organization GitHub Actions Secrets settings and reference it in the workflow as `${{ secrets.PERSONAL_ACCESS_TOKEN }}`. You can create the token by following this guide: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token and add it to GitHub Actions Secrets by following this guide: https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions
