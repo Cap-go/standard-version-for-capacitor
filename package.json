@@ -1,5 +1,5 @@
 {
-  "name": "capacitor-standard-version",
+  "name": "@capgo/capacitor-standard-version",
   "version": "1.3.30",
   "description": "Default standard-version config for capacitor app",
   "author": "Martin Donadieu <martindonadieu@gmail.com>",
@@ -19,6 +19,9 @@
     "cli"
   ],
   "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "capacitor-standard-version": "dist/index.js"
   },
