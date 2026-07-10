@@ -31,7 +31,8 @@
     "build": "bun build src/bin/index.ts --outdir dist --target node --format cjs --minify --packages external",
     "lint:fix": "eslint --fix",
     "lint": "eslint",
-    "test": "bun test"
+    "test": "bun test",
+    "changelog:ai": "node scripts/generate-ai-changelog.mjs"
   },
   "dependencies": {
     "commit-and-tag-version": "^12.6.1",
