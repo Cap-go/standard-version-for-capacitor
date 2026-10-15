@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: 24.x
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           filter: blob:none
@@ -62,7 +62,7 @@ jobs:
         with:
           node-version: 24.x
       - name: Checkoutpsuh
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Setup bun
         uses: oven-sh/setup-bun@v2
         with:
