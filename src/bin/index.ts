@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import standardVersion from 'commit-and-tag-version'
-import command from 'commit-and-tag-version/command'
+import command from 'commit-and-tag-version/command.js'
 
 import merge from 'merge-deep'
 import * as android from './android'
