@@ -2,7 +2,9 @@ export function versionPureToCode(versionPure: string): number {
   const versionCode = Number(
     versionPure
       .split('.')
-      .map(v => (v.length === 1 ? `0${v}` : v))
+      .map(v => (v.length === 1
+        ? `0${v}`
+        : v))
       .join(''),
   )
   return versionCode
