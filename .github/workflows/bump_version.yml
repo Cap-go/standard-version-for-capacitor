@@ -22,7 +22,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 24.x
+          node-version: 26.x
       - name: Checkout
         uses: actions/checkout@v6
         with:
@@ -60,7 +60,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 24.x
+          node-version: 26.x
       - name: Checkoutpsuh
         uses: actions/checkout@v6
       - name: Setup bun
