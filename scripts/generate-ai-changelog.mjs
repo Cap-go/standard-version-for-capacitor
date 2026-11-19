@@ -30,13 +30,20 @@ function git(args) {
 function resolveTags({ fromTag, toTag }) {
   const currentTag
     = toTag
-      ?? (process.env.GITHUB_REF?.startsWith('refs/tags/') ? process.env.GITHUB_REF.replace('refs/tags/', '') : null)
+      ?? (process.env.GITHUB_REF?.startsWith('refs/tags/')
+        ? process.env.GITHUB_REF.replace('refs/tags/', '')
+        : null)
 
   if (!currentTag) {
     throw new Error('Missing target tag. Set GITHUB_REF to refs/tags/<tag> or pass --to-tag.')
   }
 
-  const previousTag = fromTag ?? git(['describe', '--tags', '--abbrev=0', `${currentTag}^`])
+  const previousTag = fromTag ?? git([
+    'describe',
+    '--tags',
+    '--abbrev=0',
+    `${currentTag}^`,
+  ])
   return { previousTag, currentTag }
 }
 
@@ -94,7 +101,9 @@ async function generateChangelog(prompt, model) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      messages: [{ role: 'user', content: prompt }],
+      messages: [
+        { role: 'user', content: prompt },
+      ],
     }),
   })
 
@@ -135,7 +144,9 @@ try {
   writeGithubOutput({ result, fromTag: previousTag, toTag: currentTag })
 }
 catch (error) {
-  const message = error instanceof Error ? error.message : 'Unknown error'
+  const message = error instanceof Error
+    ? error.message
+    : 'Unknown error'
   console.error(`Changelog generation failed: ${message}`)
   process.exit(1)
 }

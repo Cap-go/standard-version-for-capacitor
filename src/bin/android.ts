@@ -17,7 +17,9 @@ export function writeVersion(contents: string, version: string): string {
 
   // Preserve the original assignment style (space vs equals)
   const newContent = contents.replace(regexM, (match, separator) => {
-    const lineEnding = match.endsWith('\r\n') ? '\r\n' : '\n'
+    const lineEnding = match.endsWith('\r\n')
+      ? '\r\n'
+      : '\n'
     return `versionName${separator}"${versionPure}"${lineEnding}`
   })
 
@@ -26,7 +28,9 @@ export function writeVersion(contents: string, version: string): string {
   const versionCodeFinal = versionCodeToCodeBeta(versionCode, versionCodeBeta)
 
   const finalContent = newContent.replace(regexC, (match, separator) => {
-    const lineEnding = match.endsWith('\r\n') ? '\r\n' : '\n'
+    const lineEnding = match.endsWith('\r\n')
+      ? '\r\n'
+      : '\n'
     return `versionCode${separator}${versionCodeFinal}${lineEnding}`
   })
 
