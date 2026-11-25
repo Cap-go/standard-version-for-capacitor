@@ -41,16 +41,45 @@ jobs:
         with:
           node-version: 26.x
           registry-url: 'https://registry.npmjs.org'
-      - name: Publish to npm
-        if: ${{ !contains(github.ref, '-alpha.') }}
+      - name: Check if version is already published on npm
+        id: npm_check
+        run: |
+          PKG=$(node -p "require('./package.json').name")
+          VERSION=$(node -p "require('./package.json').version")
+          if npm view "${PKG}@${VERSION}" version >/dev/null 2>&1; then
+            echo "already_published=true" >> "$GITHUB_OUTPUT"
+            echo "Skipping npm publish: ${PKG}@${VERSION} is already published."
+          else
+            echo "already_published=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Install npm CLI for staged publishing
+        if: steps.npm_check.outputs.already_published != 'true'
+        run: npm install -g npm@^11.15.0
+      - name: Stage publish to npm
+        if: ${{ steps.npm_check.outputs.already_published != 'true' && !contains(github.ref, '-alpha.') }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --provenance --access public
-      - name: Publish to npm with next tag
-        if: ${{ contains(github.ref, '-alpha.') }}
+        run: |
+          npm --version
+          npm stage publish --provenance --access public --ignore-scripts
+      - name: Stage publish to npm with next tag
+        if: ${{ steps.npm_check.outputs.already_published != 'true' && contains(github.ref, '-alpha.') }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --tag next --provenance --access public
+        run: |
+          npm --version
+          npm stage publish --tag next --provenance --access public --ignore-scripts
+      - name: Request stage approval
+        if: steps.npm_check.outputs.already_published != 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.NPM_STAGE_DISPATCH_TOKEN }}
+        run: |
+          gh api --method POST repos/Cap-go/automations/dispatches \
+            -f event_type=npm-stage-approve \
+            -f "client_payload[repository]=${GITHUB_REPOSITORY}" \
+            -f "client_payload[run_id]=${GITHUB_RUN_ID}" \
+            -f "client_payload[package]=$(node -p "require('./package.json').name")"
       - name: Create GitHub release
         id: create_release
         uses: softprops/action-gh-release@v3
